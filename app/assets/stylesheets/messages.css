@@ -44,6 +44,7 @@
 
 .rooms {
   padding: 20px 0 40px;
+  overflow: scroll;
 }
 
 .room-name a {
@@ -58,12 +59,11 @@
   padding:0 40px;
 }
 
-.room{
+.messages{
   height:calc(100vh - 190px);
   width:calc(100vw - 300px);
   background-color: #FAFAFA;
   padding-top:46px;
-  overflow: scroll;
 }
 
 .main-header{
@@ -145,7 +145,7 @@
   padding: 0 20px;
 }
 
-.main-form{
+.form{
   height:90px;
   padding:20px 40px;
   background-color:#dddddd;
