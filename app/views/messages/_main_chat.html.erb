@@ -3,28 +3,10 @@
       <div class="current-room">hogefuga</div>
         <div class="exit-room"><a href="#">チャットを終了する</a></div>
   </div>
-  <div class="room">
-        <div class="message">
-          <div class="upper-message">
-            <div class="message-user">Tom</div>
-            <div class="message-date">2020/3/31(Wed) 12:43:30</div>
-          </div>
-          <div class="lower-message">
-            <div class="message-content">おはよう</div>
-          </div>
-        </div>
-    
+  <div class="messages">
+      <%= render partial: 'message', collection: @messages %>
+  </div>
 
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">Tom</div>
-      <div class="message-date">2020/3/31(Wed) 12:47:30</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">こんばんは</div>
-    </div>
-  </div>
-  </div>
     <%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
   <div class="form-input">
     <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
@@ -33,6 +15,8 @@
       <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <%= f.submit '送信', class: 'form-submit' %>
+      <%= f.submit '送信', class: 'form-submit' %>
     <% end %>
   </div>
+
+</div>

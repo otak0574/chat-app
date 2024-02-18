@@ -59,7 +59,7 @@
   padding:0 40px;
 }
 
-.room{
+.messages{
   height:calc(100vh - 190px);
   width:calc(100vw - 300px);
   background-color: #FAFAFA;
