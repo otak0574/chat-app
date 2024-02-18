@@ -6,7 +6,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  #複数のユーザーに複数のルームが紐づけられる
+  #ユーザーとルームの関係
   has_many :room_users
   has_many :rooms, through: :room_users
+  #ユーザーとメッセージの関係
+  has_many :messages
 end
