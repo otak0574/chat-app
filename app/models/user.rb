@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
-
   #ユーザーとルームの関係
   has_many :room_users
   has_many :rooms, through: :room_users
   #ユーザーとメッセージの関係
   has_many :messages
+
+  validates :name, presence: true
 end
